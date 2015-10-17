@@ -10,7 +10,7 @@ OOMMF_VERSION=oommf12a5bis_20120928
 OOMMF_TARBALL=${OOMMF_VERSION}.tar.gz
 OOMMF_URL=http://math.nist.gov/oommf/dist/${OOMMF_TARBALL}
 
-TCLTKVERSION=${TCLTKVERSION:-8.6}
+TCLTKVERSION=${TCLTKVERSION:-8.5}
 
 # use OOMMF_PREFIX to change installation location (default is $HOME)
 OOMMF_PREFIX=${OOMMF_PREFIX:-$HOME}
