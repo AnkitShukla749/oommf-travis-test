@@ -1,0 +1,20 @@
+language: python
+python:
+        - "2.7"
+# command to install dependencies
+
+addons:
+  apt:
+    packages:
+    - tcl
+    - tk
+
+install:
+
+before_script:
+        - bash .travis/install-oommf
+        - export OOMMF_PREFIX=${OOMMF_PREFIX:-$HOME}
+
+# command to run tests
+script:
+        - make test-without-run-oommf
