@@ -27,8 +27,8 @@ for pkg in $PKGS; do
 	sudo apt-get ${APT_GET_OPTIONS} install $pkg
     fi
 done
-read -p "OOMMF will be installed in $OOMMF_PREFIX (this can be changed by setting the environment variable OOMMF_PREFIX). Is this correct? (y/n)" -r
-echo
+#read -p "OOMMF will be installed in $OOMMF_PREFIX (this can be changed by setting the environment variable OOMMF_PREFIX). Is this correct? (y/n)" -r
+echo "OOMMF will be installed in $OOMMF_PREFIX (this can be changed by setting the environment variable OOMMF_PREFIX)." 
 
 if ! [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "Aborting. Please set OOMMF_PREFIX to the desired installation directory and try again."
