@@ -2,15 +2,15 @@ sudo: required
 language: generic
 
 env:
-- TCL_VERSION=8.6.0
+- TCL_VERSION=8.5.0
 
 addons:
   apt:
     packages:
-    - tcl8.6
-    - tk8.6
-    - tcl8.6-dev
-    - tk8.6-dev
+    - tcl8.5
+    - tk8.5
+    - tcl8.5-dev
+    - tk8.5-dev
 
 install:
 
