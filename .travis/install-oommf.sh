@@ -57,10 +57,12 @@ cd oommf
 # install oommf
 ARCH=$(dpkg-architecture -qDEB_HOST_MULTIARCH)
 echo $ARCH
-export OOMMF_TCL_CONFIG=/usr/lib/${ARCH}/tcl${TCLTKVERSION}/tclConfig.sh
+#export OOMMF_TCL_CONFIG=/usr/lib/${ARCH}/tcl${TCLTKVERSION}/tclConfig.sh
+export OOMMF_TCL_CONFIG=/usr/lib/tcl8.5/tclConfig.sh
 echo "OOMMF_TCL_CONFIG"
 echo ${OOMMF_TCL_CONFIG}
-export OOMMF_TK_CONFIG=/usr/lib/${ARCH}/tk${TCLTKVERSION}/tkConfig.sh
+#export OOMMF_TK_CONFIG=/usr/lib/${ARCH}/tk${TCLTKVERSION}/tkConfig.sh
+export OOMMF_TCL_CONFIG=/usr/lib/tk8.5/tkConfig.sh
 echo "OOMMF_TK_CONFIG"
 echo ${OOMMF_TK_CONFIG}
 which tclsh
