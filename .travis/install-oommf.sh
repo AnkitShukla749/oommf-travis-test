@@ -64,7 +64,7 @@ export OOMMF_TK_CONFIG=/usr/lib/${ARCH}/tk${TCLTKVERSION}/tkConfig.sh
 echo "OOMMF_TK_CONFIG"
 echo ${OOMMF_TK_CONFIG}
 which tclsh
-which tclConfig.sh
+which tclsh5.8
 tclsh$TCLTKVERSION oommf.tcl pimake distclean
 tclsh$TCLTKVERSION oommf.tcl pimake upgrade
 tclsh$TCLTKVERSION oommf.tcl pimake
