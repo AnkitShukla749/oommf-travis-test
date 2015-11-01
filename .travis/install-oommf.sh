@@ -64,11 +64,16 @@ export OOMMF_TK_CONFIG=/usr/lib/${ARCH}/tk${TCLTKVERSION}/tkConfig.sh
 echo "OOMMF_TK_CONFIG"
 echo ${OOMMF_TK_CONFIG}
 which tclsh
-which tclsh5.8
-tclsh$TCLTKVERSION oommf.tcl pimake distclean
-tclsh$TCLTKVERSION oommf.tcl pimake upgrade
-tclsh$TCLTKVERSION oommf.tcl pimake
-tclsh$TCLTKVERSION oommf.tcl +platform
+find /usr/lib | grep tcl
+
+tclsh oommf.tcl pimake distclean
+tclsh oommf.tcl pimake upgrade
+tclsh oommf.tcl pimake
+tclsh oommf.tcl +platform
+#tclsh$TCLTKVERSION oommf.tcl pimake distclean
+#tclsh$TCLTKVERSION oommf.tcl pimake upgrade
+#tclsh$TCLTKVERSION oommf.tcl pimake
+#tclsh$TCLTKVERSION oommf.tcl +platform
 
 # create an executable called 'oommf' to call oommf in /usr/local/bin
 oommf_command=$(cat <<EOF
