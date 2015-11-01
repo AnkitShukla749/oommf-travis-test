@@ -59,10 +59,12 @@ ARCH=$(dpkg-architecture -qDEB_HOST_MULTIARCH)
 echo $ARCH
 export OOMMF_TCL_CONFIG=/usr/lib/${ARCH}/tcl${TCLTKVERSION}/tclConfig.sh
 echo "OOMMF_TCL_CONFIG"
-echo $OOMMF_TCL_CONFIG
+echo ${OOMMF_TCL_CONFIG}
 export OOMMF_TK_CONFIG=/usr/lib/${ARCH}/tk${TCLTKVERSION}/tkConfig.sh
 echo "OOMMF_TK_CONFIG"
-echo $OOMMF_TK_CONFIG
+echo ${OOMMF_TK_CONFIG}
+which tclsh
+which tclConfig.sh
 tclsh$TCLTKVERSION oommf.tcl pimake distclean
 tclsh$TCLTKVERSION oommf.tcl pimake upgrade
 tclsh$TCLTKVERSION oommf.tcl pimake
