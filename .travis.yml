@@ -16,7 +16,7 @@ install:
 
 before_script:
         - export OOMMF_PREFIX=${OOMMF_PREFIX:-$HOME}
-        - bash .travis/install-oommf.sh
+        - bash -x .travis/install-oommf.sh
 
 
 # command to run tests
