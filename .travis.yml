@@ -15,9 +15,13 @@ addons:
 install:
 
 before_script:
-        - bash .travis/install-oommf.sh
         - export OOMMF_PREFIX=${OOMMF_PREFIX:-$HOME}
+        - bash .travis/install-oommf.sh
+
 
 # command to run tests
 script:
-        - make test-without-run-oommf
+#        - make test-without-run-oommf
+- which tclsh
+- which oommf
+
