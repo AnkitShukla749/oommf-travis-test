@@ -69,8 +69,11 @@ which tclsh
 find /usr/lib | grep tcl
 echo "Searching tk"
 find /usr/lib | grep tk
+echo "cat /usr/lib/tk8.5/tkConfig.sh"
+cat /usr/lib/tk8.5/tkConfig.sh
+
 echo "Test ls -l tk target at /usr/lib/x86_64-linux-gnu/tk8.5"
-ls -l OOMMF_TK_CONFIG=/usr/lib/x86_64-linux-gnu/tk8.5
+ls -l /usr/lib/x86_64-linux-gnu/tk8.5
 
 tclsh oommf.tcl +platform
 tclsh oommf.tcl pimake distclean
