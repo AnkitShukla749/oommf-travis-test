@@ -30,11 +30,6 @@ done
 #read -p "OOMMF will be installed in $OOMMF_PREFIX (this can be changed by setting the environment variable OOMMF_PREFIX). Is this correct? (y/n)" -r
 echo "OOMMF will be installed in $OOMMF_PREFIX (this can be changed by setting the environment variable OOMMF_PREFIX)." 
 
-#if ! [[ $REPLY =~ ^[Yy]$ ]]; then
-#    echo "Aborting. Please set OOMMF_PREFIX to the desired installation directory and try again."
-#    exit 0
-#fi
-
 # create installation directory if it doesn't exist
 if ! [ -e ${OOMMF_PREFIX} ]; then
    echo "Creating directory $OOMMF_PREFIX.";
