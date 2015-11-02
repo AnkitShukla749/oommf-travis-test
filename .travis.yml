@@ -3,6 +3,7 @@ language: generic
 
 env:
 - TCL_VERSION=8.5.0
+- OOMMF_PATH=/home/travis/oommf
 
 addons:
   apt:
@@ -24,4 +25,4 @@ script:
 #        - make test-without-run-oommf
 - which tclsh
 - which oommf
-
+- $OOMMF_PATH/oommf.tcl +platform
