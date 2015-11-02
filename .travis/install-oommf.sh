@@ -62,7 +62,7 @@ export OOMMF_TCL_CONFIG=/usr/lib/tcl8.5/tclConfig.sh
 echo "OOMMF_TCL_CONFIG"
 echo ${OOMMF_TCL_CONFIG}
 #export OOMMF_TK_CONFIG=/usr/lib/${ARCH}/tk${TCLTKVERSION}/tkConfig.sh
-export OOMMF_TCL_CONFIG=/usr/lib/tk8.5/tkConfig.sh
+export OOMMF_TK_CONFIG=/usr/lib/tk8.5/tkConfig.sh
 echo "OOMMF_TK_CONFIG"
 echo ${OOMMF_TK_CONFIG}
 which tclsh
@@ -71,9 +71,6 @@ echo "Searching tk"
 find /usr/lib | grep tk
 echo "cat /usr/lib/tk8.5/tkConfig.sh"
 cat /usr/lib/tk8.5/tkConfig.sh
-
-echo "Test ls -l tk target at /usr/lib/x86_64-linux-gnu/tk8.5"
-ls -l /usr/lib/x86_64-linux-gnu/tk8.5
 
 tclsh oommf.tcl +platform
 tclsh oommf.tcl pimake distclean
