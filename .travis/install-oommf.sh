@@ -50,32 +50,18 @@ mv $OOMMF_EXTRACTED_DIR oommf
 cd oommf
 
 # install oommf
-ARCH=$(dpkg-architecture -qDEB_HOST_MULTIARCH)
-echo $ARCH
-#export OOMMF_TCL_CONFIG=/usr/lib/${ARCH}/tcl${TCLTKVERSION}/tclConfig.sh
 export OOMMF_TCL_CONFIG=/usr/lib/tcl8.5/tclConfig.sh
 echo "OOMMF_TCL_CONFIG"
 echo ${OOMMF_TCL_CONFIG}
-#export OOMMF_TK_CONFIG=/usr/lib/${ARCH}/tk${TCLTKVERSION}/tkConfig.sh
 export OOMMF_TK_CONFIG=/usr/lib/tk8.5/tkConfig.sh
 echo "OOMMF_TK_CONFIG"
 echo ${OOMMF_TK_CONFIG}
-which tclsh
-find /usr/lib | grep tcl
-echo "Searching tk"
-find /usr/lib | grep tk
-echo "cat /usr/lib/tk8.5/tkConfig.sh"
-cat /usr/lib/tk8.5/tkConfig.sh
 
 tclsh oommf.tcl +platform
 tclsh oommf.tcl pimake distclean
 tclsh oommf.tcl pimake upgrade
 tclsh oommf.tcl pimake
 tclsh oommf.tcl +platform
-#tclsh$TCLTKVERSION oommf.tcl pimake distclean
-#tclsh$TCLTKVERSION oommf.tcl pimake upgrade
-#tclsh$TCLTKVERSION oommf.tcl pimake
-#tclsh$TCLTKVERSION oommf.tcl +platform
 
 # create an executable called 'oommf' to call oommf in /usr/local/bin
 oommf_command=$(cat <<EOF
@@ -83,6 +69,8 @@ oommf_command=$(cat <<EOF
 tclsh $OOMMF_PREFIX/oommf/oommf.tcl "\$@"
 EOF
 )
+
+echo "oommf.tcl is at = ${OOMMF_PREFIX}/oommf/oommf.tcl"
 
 echo "Permissions needed to create an executable in '/usr/local/bin', and to\
  fix permissions in the $OOMMF_PREFIX/oommf directory."
